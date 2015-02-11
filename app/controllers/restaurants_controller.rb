@@ -2,7 +2,7 @@ class RestaurantsController  < ApplicationController
 
 	def index
 		@active      = 'restaurants'
-		@restaurants = restaurant.all
+		@restaurants =  Restaurant.all
 	end
 
 	def show
@@ -12,28 +12,46 @@ class RestaurantsController  < ApplicationController
 
   def new
     @active = 'restaurants'
-    @item   = restaurant.new
+    @restaurant   = Restaurant.new
+  end
+    
+  def create
+    @active = 'restaurants'
+    @restaurant = new(restaurant_params)
+    if @restaurant.save
+      flash[:success] = "New restaurant created."
+      redirect_to restaurants_path
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @active = 'restaurants'
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update_attributes(restaurant_params)
+      flash[:success] = "Restaurant information updated."
+      redirect_to restaurant_path(@restaurant.id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-    
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    flash[:success] = "Restaurant information deleted."
+    redirect_to restaurants_path
   end
 
-  # def create
-  #   @item = .new(item_params)
-  #   # if @item is valid, it returns a truthy value
-  #   if @item.save
-  #     flash[:success] = "Item created."
-  #     redirect_to items_path
-  #   else
-  #     render 'new'
-  #   end
-  # end
 
-  # private
+  private
 
-  #   def item_params
-  #     params.require(:item).permit(:name, :rating, :price,
-  #                                  :description, :image_file)
-  #   end
+    def restaurant_params
+      params.require(:restaurant).permit(:recommender, :category, :name, :price, :location, :description, :website, :comments, :best_dish, :image_name)
+    end
 end 

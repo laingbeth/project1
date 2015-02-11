@@ -1,37 +1,4 @@
 <% provide(:title, 'Add Restaurant') %>
 <h1>Add Restaurant</h1>
 
-<%= form_for(@restaurant) do |r| %>
-  <%= render 'shared/error_messages', object: f.object %>
-
-  <%= f.label :recommender %>
-  <%= f.text_field :recommender, autofocus: true %>
-
-  <br>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
- <%= f.label :category %>
-  <%= f.text_field :category %>
-  <br>
- <%= f.label :price %>
-  <%= f.text_field :price %>
-  <br>
- <%= f.label :comments %>
-  <%= f.text_field :comments %>
-  <br>
- <%= f.label :best_dish %>
-  <%= f.text_field :best_dish %>
-  <br>
- <%= f.label :location %>
-  <%= f.text_field :location %>
-  <br>
- <%= f.label :website %>
-  <%= f.text_field :website %>
-  <br>
- <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br>
-  
-  <%= f.submit 'Create Restaurant Recommendation' %>
-<% end %>
+<%= render 'restaurants/fields' %>

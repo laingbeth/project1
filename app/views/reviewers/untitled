@@ -1,2 +1,0 @@
-<% provide(:title, @reviewer.name) %>
-<h1><%= @reviewer.name %></h1>

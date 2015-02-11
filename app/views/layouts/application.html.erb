@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectOne</title>
+  <title>Cool Places to Eat | <%= yield(:title) %></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -12,46 +12,11 @@
 </head>
 
 <body>
-  <section>
-    <div class="container-fluid">
-      <div class="jumbotron">
 
-        <%= image_tag "food.jpg" %>
-        <h1>Places We Like to Eat</h1>
-          <p>some of our favorite places for interesting food in Atlanta</p>
-      </div>
-    </div>
-  </section>
-    
-  <section = 'navigation'>  
-    <div class="container-fluid">
-      <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+<%= debug(params) if Rails.env.development? %>
 
-      <div class="collapse navbar-collapse navbar-menubuilder">
-        <ul class="nav navbar-nav navbar-left">
-          <li class= "active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a> </li>
-          <li class= "active"><a href="/reviewers/index.html"><span class="glyphicon glyphicon-user"></span> Reviewers</a></li>
-          <li class= "active"><a href="/about"><span class="glyphicon glyphicon-globe"></span> About</a></li>
-          <li class= "active"><a href="/restaurants"><span class="glyphicon glyphicon-star"></span> Restaurants</a></li>          
-        </ul>
-      </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section>
-    
-
-    <div class="row">
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-8">
-      <%= yield %>
-      </div>
-    </div>  
-      <div class="col-md-2"></div>
-  </section>
+<%= render 'layouts/header' %>
+<%= yield %>
 
 
 <!-- Latest compiled and minified JavaScript -->

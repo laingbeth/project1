@@ -80,11 +80,6 @@ it { should be_valid }
         it { should_not be_valid }
       end
 
-      context 'too short' do
-        before { restaurant.price = 'x' * 1 }
-        it { should_not be_valid }  
-      end
-
       context 'too long' do
         before { restaurant.price = 'x' * 11 }
         it { should_not be_valid }
@@ -185,32 +180,3 @@ it { should be_valid }
 
   end  
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,6 +2,9 @@
 <h1>Cool and Interesting Places to Eat:</h1>
 <ul>
   <% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
-  <% end %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant.id) %> | 
+      <%= link_to "delete", restaurant, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+    <% end %>
 </ul>

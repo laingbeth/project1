@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'static pages' do # Tabbing
+describe 'static pages' do 
 	subject { page }
 
 	describe 'home page' do
@@ -15,5 +15,4 @@ describe 'static pages' do # Tabbing
 
 		it {should have_selector('h4', text:"This is my first project")}
 	end
-		
 end	

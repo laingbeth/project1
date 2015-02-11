@@ -1,0 +1,38 @@
+<%= form_for(@restaurant) do |r| %>
+  <%= render 'shared/error_messages', object: r.object %>
+
+  <%= r.label :name %>
+  <%= r.text_field :name, autofocus: true %>
+<br>
+  <%= r.label :recommender %>
+  <%= r.text_field :recommender %>
+<br>
+  <%= r.label :price %>
+  <%= r.text_field :price %>
+<br>
+  <%= r.label :category %>
+  <%= r.text_field :category %>   
+<br>
+  <%= r.label :price %>
+  <%= r.text_field :price %>
+<br>
+  <%= r.label :price %>
+  <%= r.text_field :price %>
+<br>
+  <%= r.label :comments %>
+  <%= r.text_field :comments %>
+<br>
+  <%= r.label :best_dish %>
+  <%= r.text_field :best_dish %>
+<br>
+  <%= r.label :location %>
+  <%= r.text_field :location %>
+<br>
+  <%= r.label :website %>
+  <%= r.text_field :website %>
+<br>
+  <%= r.label :description %>
+  <%= r.text_field :description %>
+<br>
+  <%= r.submit 'Save' %>
+<% end %>

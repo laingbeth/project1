@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
- 
-  get 'reviewers/index'
 
-root 'static_pages#home'
+  root 'static_pages#home'
+  
+  resources :restaurants, :reviewers
+  get '/about', to: 'static_pages#about'
+  get '/reviewer', to: 'static_pages#reviewer'
+
+
+
+   get 'reviewers/index'
   #sets static home page so '/' will go to 'static_pages#home'
 
-  get '/restaurants',     to: 'restaurants#index'
-  get '/restaurants/:id', to: 'restaurants#show'
-  get '/about',           to: 'static_pages#about'
+  # get '/restaurants',     to: 'restaurants#index'
+  # get '/restaurants/:id', to: 'restaurants#show'
+  # get '/about',           to: 'static_pages#about'
 
  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,5 +69,4 @@ root 'static_pages#home'
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
-end
+   end
