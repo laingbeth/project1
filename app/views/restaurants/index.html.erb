@@ -1,0 +1,7 @@
+<% provide(:title, 'Restaurant List') %>
+<h1>Cool and Interesting Places to Eat:</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
+  <% end %>
+</ul>

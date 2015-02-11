@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectOne</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <section>
+    <div class="container-fluid">
+      <div class="jumbotron">
+
+        <%= image_tag "food.jpg" %>
+        <h1>Places We Like to Eat</h1>
+          <p>some of our favorite places for interesting food in Atlanta</p>
+      </div>
+    </div>
+  </section>
+    
+  <section = 'navigation'>  
+    <div class="container-fluid">
+      <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+
+      <div class="collapse navbar-collapse navbar-menubuilder">
+        <ul class="nav navbar-nav navbar-left">
+          <li class= "active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a> </li>
+          <li class= "active"><a href="/reviewers/index.html"><span class="glyphicon glyphicon-user"></span> Reviewers</a></li>
+          <li class= "active"><a href="/about"><span class="glyphicon glyphicon-globe"></span> About</a></li>
+          <li class= "active"><a href="/restaurants"><span class="glyphicon glyphicon-star"></span> Restaurants</a></li>          
+        </ul>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    
+
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+      <%= yield %>
+      </div>
+    </div>  
+      <div class="col-md-2"></div>
+  </section>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

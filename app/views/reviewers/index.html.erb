@@ -1,0 +1,7 @@
+<% provide(:title, 'Reviewers List')
+<H1> Who is suggesting these places??!!!! </H1>
+	<ul>
+  	<% @reviewers.each do |reviewer| %>
+  		<li><strong><%= link_to reviewer.name, reviewer_path(reviewer.id) %></strong></li>
+  	<% end %>
+	</ul>
