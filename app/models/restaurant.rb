@@ -9,5 +9,4 @@ class Restaurant < ActiveRecord::Base
   validates :location, presence: true, length: { minimum: 3, maximum: 254 }
   validates :website, presence: true, length: { minimum: 3, maximum: 100 }
   validates :description, presence: true, length: { minimum: 3, maximum: 254 }
-  validates :image_name, presence: true
 end

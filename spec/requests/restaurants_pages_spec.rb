@@ -66,7 +66,7 @@ describe 'restaurant pages' do
           fill_in 'Recommender',  with: 'Allyson'
           fill_in 'Category',     with: 'Mexican'
           fill_in 'Comments',     with: 'Best deal for the price and parking is free!'
-          fill_in 'Best_dish',    with: 'The Pambazo'
+          fill_in 'Best dish',    with: 'The Pambazo'
           fill_in 'Location',     with: '4166 Buford Hwy Atlanta GA 30345'
           fill_in 'Website',      with: 'www.plazafiesta.net'
           fill_in 'Description',  with: 'Legend tells of a sandwich made from torta bread dipped in

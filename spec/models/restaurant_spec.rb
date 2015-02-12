@@ -174,8 +174,9 @@ it { should be_valid }
     describe 'image_name' do
       context 'not present' do
         before { restaurant.image_name = nil }
-        it { should_not be_valid }
+        it { should be_valid }
       end
+
     end
 
   end  
