@@ -61,8 +61,17 @@ describe 'restaurant pages' do
 
       context 'valid information' do
         before do
-          fill_in 'Name',   with: 'Plaza Fiesta Food Court'
-          fill_in 'Price',  with: '$'
+          fill_in 'Name',         with: 'Plaza Fiesta Food Court'
+          fill_in 'Price',        with: '$'
+          fill_in 'Recommender',  with: 'Allyson'
+          fill_in 'Category',     with: 'Mexican'
+          fill_in 'Comments',     with: 'Best deal for the price and parking is free!'
+          fill_in 'Best_dish',    with: 'The Pambazo'
+          fill_in 'Location',     with: '4166 Buford Hwy Atlanta GA 30345'
+          fill_in 'Website',      with: 'www.plazafiesta.net'
+          fill_in 'Description',  with: 'Legend tells of a sandwich made from torta bread dipped in
+                       ranchero sauce, filled with chorizo sausage, potatoes, lettuce, cheese & sour cream.'
+
         end
 
         it 'creates restaurant' do
@@ -125,7 +134,7 @@ describe 'restaurant pages' do
 
       context 'invalid information' do
         before do
-          fill_in "Name", with: ""
+          fill_in "Name", with: " "
           click_button submit
         end
         describe 'after submission' do

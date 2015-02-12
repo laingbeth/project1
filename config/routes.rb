@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   
-  resources :restaurants, :reviewers
+  resources :restaurants
   get '/about', to: 'static_pages#about'
   get '/reviewer', to: 'static_pages#reviewer'
 

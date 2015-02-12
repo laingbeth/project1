@@ -1,2 +1,11 @@
 <% provide(:title, @restaurant.name) %>
 <h1><%= @restaurant.name %></h1>
+<ul>
+<li><%= @restaurant.category %></li>
+<li><%= @restaurant.price %></li>
+<li><%= @restaurant.comments %></li>
+<li><%= @restaurant.best_dish %></li>
+<li><%= @restaurant.location %></li>
+<li><a href="http://<%= @restaurant.website %>"target="_blank"><%= @restaurant.website %></a></li>
+<li><%= @restaurant.description %></li>
+</ul>
